@@ -11,7 +11,7 @@ def english_to_french():
     return french_text
 
 @app.route("/frenchToEnglish")
-def frenchToEnglish():
+def french_to_english():
     translation = language_translator.translate(text=french_text,model_id='fr-en').get_result()
     english_text = translation['translations'][0]['translation']
     return english_text
